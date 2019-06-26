@@ -2,11 +2,14 @@ export class Tile {
     x: number;
     y: number;
     styles: ITileStyle;
+    innerText?: number
+    hasVisited = false
 
-    constructor(x: number, y: number) {
+    constructor(x: number, y: number, innerText = null) {
         this.x = x;
         this.y = y;
         this.styles = { backgroundColor: "#6C6F93" };
+        this.innerText = innerText;
     }
 }
 

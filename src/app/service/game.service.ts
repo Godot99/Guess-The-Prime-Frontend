@@ -1,5 +1,5 @@
 import { Board } from '../models/board'
-import { Player, Tile } from '../models/tile';
+import { Player, Tile, NumberTile } from '../models/tile';
 import { Injectable } from '@angular/core';
 @Injectable({
     providedIn: 'root'
@@ -8,11 +8,14 @@ export class GameService {
     board: Board
     tileSize: number
     player: Player
+    numberTile: NumberTile
 
     constructor() {
         this.player = new Player(0, 0)
         this.tileSize = 64
         this.initGame()
+        this.numberTile = new NumberTile((Math.random() * 10) + 1, (Math.random() * 10) + 1, 'ss', true)
+
     }
 
     initGame() {
@@ -42,6 +45,20 @@ export class GameService {
                 if (this.isMoveValid(this.player.x, this.player.y - 1)) this.player.y -= 1
                 break;
         }
+
+        const currentTile = this.board.grid[this.player.x][this.player.y];
+
+        if (currentTile.hasVisited) return;
+        if (currentTile.innerText === null) return;
+
+        currentTile.hasVisited = true
+
+        if (this.board.isPrime(currentTile.innerText)) {
+            currentTile.styles.backgroundColor = "#0f0"
+        } else {
+            currentTile.styles.backgroundColor = "#f00"
+        }
+
     }
 
 }

@@ -10,6 +10,7 @@ export class GridComponent {
   @Input() height: number;
   @Input() width: number;
 
+
   constructor(private game: GameService) { }
 
 }

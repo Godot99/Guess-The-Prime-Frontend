@@ -11,13 +11,9 @@ export class TileComponent {
   @Input() x;
   @Input() y;
   @Input() styles;
+  @Input() innerText: string;
 
   constructor(private game: GameService) {
-  }
-
-  ngAfterViewInit() {
-    console.log({ x: this.x, y: this.y })
-    // setTimeout(() => this.x = 0, 2000)
   }
 
   getStyles() {

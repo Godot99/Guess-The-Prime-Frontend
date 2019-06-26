@@ -2,7 +2,9 @@
   <div class="grid" [style.height.px]="height" [style.width.px]="width">
 
     <div *ngFor="let row of game.board.grid">
-      <tile class="grid-tile" *ngFor="let tile of row" [x]="tile.x" [y]="tile.y" [styles]="tile.styles"></tile>
+      <tile class="grid-tile" *ngFor="let tile of row" [x]="tile.x" [y]="tile.y" [styles]="tile.styles"
+        [innerText]="tile.innerText">
+      </tile>
     </div>
     <player-tile class="player-styles" [x]="game.player.x" [y]="game.player.y" [styles]="game.player.styles">
     </player-tile>
