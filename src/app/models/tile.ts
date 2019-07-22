@@ -8,7 +8,7 @@ export class Tile {
     constructor(x: number, y: number, innerText = null) {
         this.x = x;
         this.y = y;
-        this.styles = { backgroundColor: "#6C6F93" };
+        this.styles = { backgroundColor: "#bfcde6" };
         this.innerText = innerText;
     }
 }
@@ -37,6 +37,6 @@ export class NumberTile extends Tile {
 export class Player extends Tile {
     constructor(x: number, y: number) {
         super(x, y)
-        this.styles.backgroundColor = "#F43E5C"
+        this.styles.backgroundColor = "#2c2b2a"
     }
 }

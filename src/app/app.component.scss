@@ -1,0 +1,19 @@
+:host {
+    .grid-container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: auto;
+      height: 100vh;
+    }
+  }
+  
+  div.center-main {
+    // transform: translateX(30%);
+
+
+  }
+
+  main {
+    display: block;
+    height: 100%;
+  }

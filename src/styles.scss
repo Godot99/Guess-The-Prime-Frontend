@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=B612+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+
+$headings-font-family: Cabin;
+$primary: #2f3c48;
+$secondary: #6f7f8c;
+$success: #3e4d59;
+$danger: #cc330d;
+$info: #5c8f94;
+$warning: #6e9fa5;
+$light: #eceeec;
+$dark: #1e2b37;
+$enable-gradients: false;
+$spacer: 1rem;
+$border-width: 3px;
+$btn-border-radius: 0.25rem;
+$enable-responsive-font-sizes: true;
+
+@import '~node_modules/bootstrap/scss/bootstrap.scss';
+
+.ng-touched.ng-invalid {
+  @extend .is-invalid;
+}
+
+.ng-touched.ng-valid {
+  @extend .is-valid;
+}
+
+.is-invalid,
+.is-valid {
+  .invalid-feedback {
+    display: block;
+  }
+}
+
+a {
+  cursor: pointer !important;
+}
+body {
+  overflow-x: hidden;
+}

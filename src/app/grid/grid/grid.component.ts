@@ -4,6 +4,7 @@ import { GameService } from 'src/app/service/game.service';
 @Component({
   selector: 'grid',
   templateUrl: './grid.component.html',
+  styleUrls: ['./grid.component.scss'],
 })
 export class GridComponent {
 

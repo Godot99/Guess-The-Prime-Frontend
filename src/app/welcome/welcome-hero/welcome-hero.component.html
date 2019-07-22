@@ -1,0 +1,13 @@
+<div class="jumbotron bg-primary text-white">
+  <h1>How to play:</h1>
+
+  <hr class="my-4 bg-white" />
+  <ul class="list-unstyled">
+    <li *ngFor="let item of rows" class="mt-4">
+      <h3>
+        <i [class]="item.icon"></i>
+        {{ item.message }}
+      </h3>
+    </li>
+  </ul>
+</div>

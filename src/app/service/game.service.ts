@@ -59,6 +59,8 @@ export class GameService {
             currentTile.styles.backgroundColor = "#f00"
         }
 
+
+
     }
 
 }

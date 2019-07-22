@@ -1,7 +1,7 @@
 import { Tile, Player } from './tile';
 
 
-const NUMBER_CHANCE = 50
+const NUMBER_CHANCE = 30
 
 export class Board {
     grid: Tile[][];
@@ -42,6 +42,7 @@ export class Board {
             return null;
         }
 
-        return Math.floor(Math.random() * 20)
+        return Math.floor(Math.random() * 30
+        )
     }
 }
